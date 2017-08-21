@@ -1,0 +1,193 @@
+{
+  "variables": [],
+  "info": {
+    "name": null,
+    "_postman_id": "23403c36-51c1-bf59-f10c-515e411f9225",
+    "description": "Performing a simple `GET` request to this endpoint returns status code `401 Unauthorized` with `WWW-Authenticate` header containing information to successfully authenticate subsequent requests.\nThe `WWW-Authenticate` header must be processed to extract `realm` and `nonce` values to hash subsequent requests.\n\nWhen this request is executed within Postman, the script attached with this request does the hard work of extracting realm and nonce from the header and set it as [global variables](https://www.getpostman.com/docs/environments#global-variables?source=echo-collection-app-onboarding) named `echo_digest_nonce` and `echo_digest_realm`.\nThese variables are re-used in subsequent request for seamless integration of the two requests.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "87a5ce0a-1dcf-7c67-91fd-25f93ee49145",
+      "name": "https://api.telegram.org/bot361469459:AAHZDhgIKaIauExDAWrEerTDyo38yHn2OmE/getme",
+      "request": {
+        "url": {
+          "raw": "https://api.telegram.org/bot361469459:AAHZDhgIKaIauExDAWrEerTDyo38yHn2OmE/sendMessage?chat_id=285748368&text=Hello",
+          "protocol": "https",
+          "auth": {},
+          "host": [
+            "api",
+            "telegram",
+            "org"
+          ],
+          "path": [
+            "bot361469459:AAHZDhgIKaIauExDAWrEerTDyo38yHn2OmE",
+            "sendMessage"
+          ],
+          "query": [
+            {
+              "key": "chat_id",
+              "value": "285748368",
+              "equals": true,
+              "description": ""
+            },
+            {
+              "key": "text",
+              "value": "Hello",
+              "equals": true,
+              "description": ""
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "description": ""
+      },
+      "response": [
+        {
+          "id": "27bd741c-fb8c-8073-890e-fef2a17cb34e",
+          "name": "getme",
+          "originalRequest": {
+            "url": {
+              "raw": "https://api.telegram.org/bot361469459:AAHZDhgIKaIauExDAWrEerTDyo38yHn2OmE/sendMessage?chat_id=285748368&text=Hello",
+              "protocol": "https",
+              "auth": {},
+              "host": [
+                "api",
+                "telegram",
+                "org"
+              ],
+              "path": [
+                "bot361469459:AAHZDhgIKaIauExDAWrEerTDyo38yHn2OmE",
+                "sendMessage"
+              ],
+              "query": [
+                {
+                  "key": "chat_id",
+                  "value": "285748368",
+                  "equals": true,
+                  "description": ""
+                },
+                {
+                  "key": "text",
+                  "value": "Hello",
+                  "equals": true,
+                  "description": ""
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "header": [],
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "_postman_previewtype": "text",
+          "header": [
+            {
+              "name": "access-control-allow-methods",
+              "key": "access-control-allow-methods",
+              "value": "GET, POST, OPTIONS",
+              "description": ""
+            },
+            {
+              "name": "access-control-allow-origin",
+              "key": "access-control-allow-origin",
+              "value": "*",
+              "description": ""
+            },
+            {
+              "name": "access-control-expose-headers",
+              "key": "access-control-expose-headers",
+              "value": "Content-Length,Content-Type,Date,Server,Connection",
+              "description": ""
+            },
+            {
+              "name": "connection",
+              "key": "connection",
+              "value": "keep-alive",
+              "description": ""
+            },
+            {
+              "name": "content-length",
+              "key": "content-length",
+              "value": "315",
+              "description": ""
+            },
+            {
+              "name": "content-type",
+              "key": "content-type",
+              "value": "application/json",
+              "description": ""
+            },
+            {
+              "name": "date",
+              "key": "date",
+              "value": "Thu, 17 Aug 2017 09:17:25 GMT",
+              "description": ""
+            },
+            {
+              "name": "server",
+              "key": "server",
+              "value": "nginx/1.10.0",
+              "description": ""
+            },
+            {
+              "name": "strict-transport-security",
+              "key": "strict-transport-security",
+              "value": "max-age=31536000; includeSubdomains",
+              "description": ""
+            }
+          ],
+          "cookie": [],
+          "responseTime": "303",
+          "body": "{\"ok\":true,\"result\":{\"message_id\":406,\"from\":{\"id\":361469459,\"first_name\":\"Probnik-Ruby\",\"username\":\"Ruby_Tester_Bot\"},\"chat\":{\"id\":285748368,\"first_name\":\"DAFFY \\u0432\\u0441\\u0435 \\u0432 \\u043d\\u0430\\u043b\\u0438\\u0447\\u0438\\u0438!!!\",\"username\":\"Daffy_perm_bot\",\"type\":\"private\"},\"date\":1502961445,\"text\":\"Hello\"}}"
+        }
+      ]
+    },
+    {
+      "_postman_id": "dfa6928a-ff75-d86d-2a62-1d36edcc53e6",
+      "name": "sendMessage",
+      "request": {
+        "url": {
+          "raw": "https://api.telegram.org/bot361469459:AAHZDhgIKaIauExDAWrEerTDyo38yHn2OmE/sendMessage?chat_id=285748368&text=Hello",
+          "protocol": "https",
+          "auth": {},
+          "host": [
+            "api",
+            "telegram",
+            "org"
+          ],
+          "path": [
+            "bot361469459:AAHZDhgIKaIauExDAWrEerTDyo38yHn2OmE",
+            "sendMessage"
+          ],
+          "query": [
+            {
+              "key": "chat_id",
+              "value": "285748368",
+              "equals": true,
+              "description": ""
+            },
+            {
+              "key": "text",
+              "value": "Hello",
+              "equals": true,
+              "description": ""
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "description": ""
+      },
+      "response": []
+    }
+  ]
+}
